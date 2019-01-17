@@ -32,7 +32,7 @@ optional arguments:
 
 example:
 
-	We want to query miRNA with TCGA id in input.txt and then download the manifest to output.txt.
+	We want to query mRNA with TCGA id in input.txt and then download the manifest to output.txt.
 
 	input.txt:
 		TCGA-05-4250
@@ -41,7 +41,7 @@ example:
 		"TCGA-05-4417-0164"
 	
 	Then run with:
-		python tcga_query.py -i input.txt -t miRNA -o out.txt
+		python tcga_query.py -i input.txt -t mRNA -o out.txt
 		
 	The program will write the following into output.txt:
 		id	filename	md5	size	state
