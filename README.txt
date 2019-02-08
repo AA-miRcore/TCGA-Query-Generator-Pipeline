@@ -24,11 +24,16 @@ optional arguments:
   -q, --query           If this option is included, a TCGA QUERY will be
 						outputed to stdout and a manifest will not be
 						downloaded.
+<<<<<<< HEAD
   -m MANIFEST, --manifest MANIFEST
+=======
+  -o OUTPUT, --output OUTPUT
+>>>>>>> origin/master
                         The name of the file to download the manifest to (will
                         overwrite file if it already exists). If this argument
 						is not specified (and neither is -q), manifest will be
                         outputed to stdout.
+<<<<<<< HEAD
   -d METADATA, --metadata METADATA
                         The name of the file to download the JSON metadata to (will
                         overwrite file if it already exists). If this argument
@@ -38,6 +43,12 @@ optional arguments:
 example:
 
 	We want to query miRNA with TCGA id in input.txt and then download the manifest to output.txt.
+=======
+
+example:
+
+	We want to query mRNA with TCGA id in input.txt and then download the manifest to output.txt.
+>>>>>>> origin/master
 
 	input.txt:
 		TCGA-05-4250
@@ -46,7 +57,11 @@ example:
 		"TCGA-05-4417-0164"
 	
 	Then run with:
+<<<<<<< HEAD
 		python tcga_query.py -i input.txt -t miRNA -m out.txt -d meta.json
+=======
+		python tcga_query.py -i input.txt -t mRNA -o out.txt
+>>>>>>> origin/master
 		
 	The program will write the following into output.txt:
 		id	filename	md5	size	state
@@ -62,5 +77,8 @@ example:
 		1fae764e-3807-4565-a78d-5ea852d327a7	d011c9fc-3598-4f0b-b059-85d63de31a9f.htseq.counts.gz	7207f6f35a1b2044035b700eb4e68aa9	248552	released
 		999f701a-2bd2-4e9d-94af-08d0f1be769c	dc76cdde-f77f-4604-94c4-0b150b9a56b4.FPKM.txt.gz	80e7f3092027e21e879633c74596aa37	509899	released
 		96332d27-a064-4ca5-bf5d-f9c357556c39	d011c9fc-3598-4f0b-b059-85d63de31a9f.FPKM-UQ.txt.gz	9aadc0fd9352dccf65e509ecf186c8a7	503624	released
+<<<<<<< HEAD
 
 	Metadata will be outputed to meta.json
+=======
+>>>>>>> origin/master
