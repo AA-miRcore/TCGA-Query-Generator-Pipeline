@@ -9,7 +9,7 @@ date:	1-17-19
 
 Parse vcf files by deleting metadata and keeping only selected columns.
 
-usage: tcga_query.py [-h] -i INPUT -t {mRNA,miRNA,both} [-q] [-o OUTPUT]
+usage: tcga_query.py [-h] -i INPUT -t {mRNA,miRNA,both} [-q] [-m MANIFEST] [-d METADATA]
 
 required arguments:
   -i INPUT, --input INPUT
