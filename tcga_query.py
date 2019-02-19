@@ -52,7 +52,7 @@ else:
     u = urllib2.urlopen(r)
     shutil.copyfileobj(u, manifest_stream)
 
-    r_meta = urllib2.Request("https://api.gdc.cancer.gov/files", data=post)
+    r_meta = urllib2.Request("https://api.gdc.cancer.gov/files?pretty=true", data=post)
     r_meta.add_header("Content-Type",'application/json')
     u_meta = urllib2.urlopen(r_meta)
     shutil.copyfileobj(u_meta, metadata_stream)
