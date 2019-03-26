@@ -46,7 +46,7 @@ else:
         metadata_stream = open(args.metadata, "wb");
     else:
         metadata_stream = sys.stdout
-    post = '{"filters":{"op":"and","content":[{"op":"in","content":{"field":"files.file_name","value":[' + types + ']}},{"op":"in","content":{"field":"cases.project.program.name","value":["TCGA"]}},{"op":"in","content":{"field":"cases.submitter_id","value":[' + list + ']}}]},"size":"99999999","fields":"' + fields + '"}';
+    post = '{"filters":{"op":"and","content":[{"op":"in","content":{"field":"files.file_name","value":[' + types + ']}},{"op":"in","content":{"field":"cases.project.program.name","value":["TCGA"]}},{"op":"in","content":{"field":"cases.submitter_id","value":[' + list + ']}}]},"size":"10000000","fields":"' + fields + '"}';
     r = urllib2.Request("https://api.gdc.cancer.gov/files?return_type=manifest", data=post)
     r.add_header("Content-Type",'application/json')
     u = urllib2.urlopen(r)
